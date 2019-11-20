@@ -117,12 +117,12 @@ function Ball(posx,posy,velx,vely,tam){
   
   this.wallcollide = function(){
     
-    if(this.posx + this.tam > width   ||  this.posx - this.tam < 0)
+    if(this.posx + this.tam/2 > width   ||  this.posx - this.tam/2 < 0)
     {
       this.velx *= (-1);
     }
     
-    if(this.posy + this.tam > height  ||   this.posy - this.tam < 0)
+    if(this.posy + this.tam/2 > height  ||   this.posy - this.tam/2 < 0)
     {
       this.vely *= (-1);
     }
