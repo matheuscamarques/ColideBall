@@ -12,11 +12,11 @@
 
 var quantidade = 100;
 var Bola = [];
-var tam;
+var tam; //DIAMETRO
 
 function setup() {
   
-  createCanvas(700, 700);
+  createCanvas(1400, 700);
   for(i=0;i<quantidade;i++)
   {
     tam = random(25);
