@@ -16,7 +16,7 @@ var tam; //DIAMETRO
 
 function setup() {
   
-  createCanvas(1200, 600);
+  createCanvas(windowWidth, windowHeight);
   for(i=0;i<quantidade;i++)
   {
     tam = random(30);
