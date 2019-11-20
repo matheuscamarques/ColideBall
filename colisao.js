@@ -2,7 +2,7 @@
 
 
     Autor: Matheus de Camargo Marques
-    
+    Email: mmarques.1997@alunos.utfpr.edu.br
     Engenharia da Computação - UTFPR 
 
     
@@ -16,14 +16,14 @@ var tam; //DIAMETRO
 
 function setup() {
   
-  createCanvas(1400, 700);
+  createCanvas(1200, 600);
   for(i=0;i<quantidade;i++)
   {
-    tam = random(25);
+    tam = random(30);
     Bola[i] = new Ball(random(width-tam,tam),
                        random(height-tam,tam),
-                       random(-2,2),
-                       random(-2,2),
+                       random(-1,1),
+                       random(-1,1),
                        tam
                       );
    }  
@@ -38,10 +38,21 @@ function draw() {
   {
     Bola[i].desenha();
     Bola[i].wallcollide();
+ 
   }  
   
   colisao();
-
+  //mmarques.1997@alunos.utfpr.edu.br
+  var textsize = 20;
+  strokeWeight(5); 
+  stroke('black'); 
+  fill('green');
+  textSize(textsize);
+  text('Autor: Matheus de Camargo Marques', 10, textsize+2);
+  text('Email: mmarques.1997@alunos.utfpr.edu.br', 10, textsize*2+2);
+  text('Curso: Engenharia da Computação - UTFPR', 10, textsize*3+2);
+   text("FPS " +  int(getFrameRate()), width-textsize*10, 20); 
+   noStroke();
   
 }
 
