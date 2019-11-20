@@ -19,7 +19,7 @@ function setup() {
   createCanvas(700, 700);
   for(i=0;i<quantidade;i++)
   {
-    tam = 20;
+    tam = random(25);
     Bola[i] = new Ball(random(width-tam,tam),
                        random(height-tam,tam),
                        random(-2,2),
@@ -59,7 +59,7 @@ function colisao(){
           distancia_centros = x*x + y*y ;
          // alert(distancia_centros);
           
-          if(distancia_centros <= tam/2*tam/2*4)
+          if(distancia_centros <= Bola[i].tam*Bola[j].tam)
            {
               //Atualiza vel
               var colisao = distancia_centros;
