@@ -70,7 +70,7 @@ function colisao(){
           distancia_centros = x*x + y*y ;
          // alert(distancia_centros);
           
-          if(distancia_centros <= Bola[i].tam*Bola[j].tam)
+          if(distancia_centros <= (Bola[i].tam/2*Bola[j].tam/2)*4)
            {
               //Atualiza vel
               var colisao = distancia_centros;
